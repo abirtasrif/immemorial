@@ -47,3 +47,44 @@ section{
 .min-h-100vh{
   min-height: 100vh;
 }
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2rem 0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.links, .favourite-link{
+  font-weight: 700;
+}
+
+.links a, .favourite-link a{
+  color: var(--color-dark);
+  position: relative;
+}
+
+.links a::after, .favourite-link a::after{
+  content: "";
+  width: 0%;
+  height: 0.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50% );
+  background-color: var(--color-primary);
+  transition: 0.3s;
+}
+.links a:hover::after, .favourite-link a:hover::after{
+  width: 120%;
+}
+
+.logo{
+  font-family: 'Syncopate', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
