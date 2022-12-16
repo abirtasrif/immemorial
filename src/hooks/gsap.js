@@ -26,3 +26,24 @@ export const useGsapShutterUnveil = (item, delay = 0, trig) => {
     );
   }, []);
 };
+
+export const useGsapDownStagger = (arrLinks, delay = 0) => {
+  useEffect(() => {
+    const el = arrLinks.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100vh",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        stagger: 0.1,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
