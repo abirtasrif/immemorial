@@ -13,9 +13,9 @@ const Navbar = () => {
   const favArr = [favRef];
   const logArr = [logoRef];
 
-  useGsapDownStagger(liArr, 0.9);
-  useGsapDownStagger(favArr, 1.8);
-  useGsapDownStagger(logArr, 1.5);
+  useGsapDownStagger(liArr, 0.5);
+  useGsapDownStagger(favArr, 0.8);
+  useGsapDownStagger(logArr, 1);
 
   return (
     <nav className="navbar wrapper">
