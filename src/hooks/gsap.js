@@ -92,3 +92,51 @@ export const useGsapPhotoParallex = (arr, trig) => {
     );
   }, []);
 };
+
+export const useGsapFeaturedLeftShutterUnveil = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        height: "100%",
+      },
+      {
+        height: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapFeaturedRightShutterUnveil = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        width: "100%",
+      },
+      {
+        width: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};

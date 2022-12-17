@@ -42,7 +42,15 @@ body {
 }
 
 section {
-  padding: 5vw 10vw;
+  padding: 2vw 5vw;
+}
+
+.section-title {
+  font-family: "Syncopate", sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 5vw;
+  text-transform: lowercase;
+  color: var(--color-primary);
 }
 
 .min-h-100vh {
@@ -170,4 +178,41 @@ section {
 .photo.five {
   grid-column: 5;
   grid-row: 1;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 30% auto;
+  align-items: center;
+  gap: 10rem;
+}
+
+.feature-text {
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.features img {
+  width: 100%;
+}
+
+.feature-left,
+.feature-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.feature-shutter-l,
+.feature-shutter-r {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-lighter);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
