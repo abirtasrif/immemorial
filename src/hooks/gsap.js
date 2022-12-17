@@ -128,7 +128,7 @@ export const useGsapFeaturedRightShutterUnveil = (item, trig) => {
       },
       {
         width: 0,
-        duration: 1,
+        duration: 1.5,
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
@@ -136,6 +136,26 @@ export const useGsapFeaturedRightShutterUnveil = (item, trig) => {
           end: "bottom center",
           toggleActions: "play reverse play reverse",
         },
+      }
+    );
+  }, []);
+};
+
+export const useGsapGallreyTitleHandler = (item, trig) => {};
+export const useGsapGalleryCategoryHandler = (item, trig) => {};
+export const useGsapGalleryImageHandler = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: 0,
+        width: 0,
+      },
+      {
+        x: "50%",
+        width: "100%",
       }
     );
   }, []);
