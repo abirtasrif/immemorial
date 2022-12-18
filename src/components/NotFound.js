@@ -27,7 +27,7 @@ const NotFound = ({ needFullHeight }) => {
             ref={nfImageRef1}
             className="nf-image1"
             src="https://images.pexels.com/photos/13262992/pexels-photo-13262992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="nf-photo-right"
+            alt="girl sitting on car"
           />
         </div>
       </div>
@@ -37,7 +37,7 @@ const NotFound = ({ needFullHeight }) => {
             ref={nfImageRef2}
             className="nf-image2"
             src="https://images.pexels.com/photos/5808388/pexels-photo-5808388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="nf-photo-left"
+            alt="camera holding in hands with sky background"
           />
         </div>
         <div>

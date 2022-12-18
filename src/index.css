@@ -313,3 +313,145 @@ section {
 .nf-image2 {
   margin-left: 25rem;
 }
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-lighter);
+  gap: 0.5rem;
+}
+
+.blog-grid1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  background-image: url("https://img.freepik.com/free-photo/impressive-bright-color-brush-falling-powder_23-2148209037.jpg?w=740&t=st=1671358880~exp=1671359480~hmac=216ef77ae16e7e48422f12b53c46a89b1d00f4d5673886a1ae851078f18f5667");
+  position: relative;
+  border-radius: 1.5rem 0 0 0;
+}
+.blog-grid2 {
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 2;
+  background-image: url("https://img.freepik.com/free-photo/amazing-flying-colorful-dye-cloud_23-2148209031.jpg?w=740&t=st=1671359018~exp=1671359618~hmac=c16a8555d41bad514a7a270a1dee25a355acdc8c74c31922f4297577b38eaab6");
+  position: relative;
+  border-radius: 0 0 0 1.5rem;
+}
+.blog-grid3 {
+  grid-row: 1 / span 3;
+  background-image: url("https://img.freepik.com/free-photo/road-rock-formation-table-mountain-national-park-africa_181624-14785.jpg?w=740&t=st=1671359197~exp=1671359797~hmac=a1fd980b30180e4e37d11936b5e1163ca45f2619f9efb2a8d3ccb1f89a9017e8");
+  position: relative;
+}
+.blog-grid4 {
+  grid-row: 4 / span 1;
+  grid-column: 3 / span 3;
+  background-image: url("https://img.freepik.com/free-photo/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg?w=740&t=st=1671359381~exp=1671359981~hmac=2124efddcaf0a744ada556b71bdac53f714895142d562cbeb5df825804fb099b");
+  position: relative;
+  border-radius: 0 0 1.5rem 0;
+}
+
+.blog-grid5 {
+  grid-row: 1 / span 1;
+  grid-column: 4 / span 2;
+  background-image: url("https://img.freepik.com/free-photo/closeup-shot-ferns-spots-fern-are-spores_181624-36493.jpg?w=740&t=st=1671359227~exp=1671359827~hmac=20dc100b9b69ae4f5b743c9bfb84724eb495f8a710326b344bff5eceed97547c");
+  position: relative;
+  border-radius: 0 1.5rem 0 0;
+}
+.blog-grid6 {
+  grid-row: 2 / span 1;
+  grid-column: 4 / span 2;
+  background-image: url("https://img.freepik.com/free-photo/beautiful-shot-steep-hills-desert-with-amazing-cloudy-sky_181624-889.jpg?w=740&t=st=1671359317~exp=1671359917~hmac=14b206570bcde5e2bc1a4d0e5f8796180bfeea4ded34bac657069cfe81a103f1");
+  position: relative;
+}
+.blog-grid7 {
+  grid-row: 3 / span 1;
+  grid-column: 4 / span 2;
+  background-image: url("https://img.freepik.com/free-photo/beautiful-shot-desert-with-trails-sand-rocky-hills-calm-sky_181624-4547.jpg?w=740&t=st=1671359343~exp=1671359943~hmac=488644b9458af6de9e179c75c5b65f4fe41f2a3edf8a01332f155689df1fdfa4");
+  position: relative;
+}
+
+.blog-details {
+  position: absolute;
+  bottom: 0;
+  padding: 0.3rem;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+.blog-grid1:hover .blog-details {
+  text-align: center;
+  bottom: 40%;
+}
+
+.blog-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: all 0.3s;
+}
+.blog-grid1:hover .blog-after {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border-radius: 1.5rem 0 0 0;
+}
+
+.blog-grid2:hover .blog-details {
+  text-align: center;
+  bottom: 40%;
+}
+.blog-grid2:hover .blog-after {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border-radius: 0 0 0 1.5rem;
+}
+.blog-grid3:hover .blog-details {
+  text-align: center;
+  bottom: 40%;
+}
+.blog-grid3:hover .blog-after {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.blog-grid6:hover .blog-details,
+.blog-grid7:hover .blog-details {
+  text-align: center;
+  bottom: 20%;
+}
+
+.blog-grid6:hover .blog-after,
+.blog-grid7:hover .blog-after {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.blog-grid4:hover .blog-details {
+  text-align: center;
+  bottom: 20%;
+  left: 16%;
+}
+.blog-grid4:hover .blog-after {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border-radius: 0 0 1.5rem 0;
+}
+
+.blog-grid5:hover .blog-details {
+  text-align: center;
+  bottom: 20%;
+}
+.blog-grid5:hover .blog-after {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border-radius: 0 1.5rem 0 0;
+}
