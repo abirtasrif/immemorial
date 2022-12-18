@@ -141,8 +141,54 @@ export const useGsapFeaturedRightShutterUnveil = (item, trig) => {
   }, []);
 };
 
-export const useGsapGallreyTitleHandler = (item, trig) => {};
-export const useGsapGalleryCategoryHandler = (item, trig) => {};
+export const useGsapGallreyTitleHandler = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "30%",
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapGalleryCategoryHandler = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "-100vw",
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
 export const useGsapGalleryImageHandler = (item) => {
   useEffect(() => {
     const el = item.current;
@@ -154,8 +200,38 @@ export const useGsapGalleryImageHandler = (item) => {
         width: 0,
       },
       {
-        x: "50%",
+        x: "30%",
         width: "100%",
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapFooterHeaderHandler = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100%",
+      },
+      {
+        y: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        ScrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play",
+        },
       }
     );
   }, []);

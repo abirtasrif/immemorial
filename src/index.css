@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&display=swap");
 
 :root {
-  --color-primary: #d51f41;
+  --color-primary: #d53f41;
   --color-dark: #626262;
   --color-darker: #464646;
   --color-light: #dbd8d6;
@@ -267,4 +268,15 @@ section {
   background-size: cover;
   width: 100%;
   height: 100vh;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 10vw;
+  text-transform: lowercase;
+  color: var(--color-primary);
 }

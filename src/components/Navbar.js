@@ -40,7 +40,7 @@ const Navbar = () => {
         <Link to="/">immemorial</Link>
       </div>
       <div className="favourite-link" ref={favRef}>
-        <Link to="/">favourite</Link>
+        <Link to="/blog">Blog</Link>
       </div>
     </nav>
   );
