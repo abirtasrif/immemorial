@@ -280,3 +280,36 @@ section {
   text-transform: lowercase;
   color: var(--color-primary);
 }
+
+.not-found {
+  margin: 0.2rem 8rem;
+  font-family: "Bai Jamjuree";
+  font-size: 11rem;
+  line-height: 1;
+  font-weight: 700;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+}
+
+.nf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nf-img-container {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.nf-image1,
+.nf-image2 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.nf-image2 {
+  margin-left: 25rem;
+}

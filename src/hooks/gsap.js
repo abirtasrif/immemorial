@@ -236,3 +236,46 @@ export const useGsapFooterHeaderHandler = (item, trig) => {
     );
   }, []);
 };
+
+export const useGsapNfImageHandler = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        scale: 1.5,
+      },
+      {
+        scale: 1,
+        duration: 1,
+        ease: Expo.easeInOut,
+        ScrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play",
+        },
+      }
+    );
+  }, []);
+};
+export const useGsapNfTextHandler = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        color: "#d53f41",
+      },
+      {
+        color: "#464646",
+        duration: 1,
+        ease: Expo.easeInOut,
+        ScrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play",
+        },
+      }
+    );
+  }, []);
+};
